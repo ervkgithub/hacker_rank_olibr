@@ -1,0 +1,35 @@
+<div class="layout-column align-items-center justify-content-center">
+    <section class="content layout-row align-items-center justify-content-center mt-50">
+      <table class="card content">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Breakfast</th>
+            <th>Lunch</th>
+            <th>Dinner</th>
+          </tr>
+        </thead>
+        <tbody data-test-id="meal-schedule">
+          <tr *ngFor="let guest of guestList; let idx=index" class="slide-up-fade-in" id="schedule-{{idx}}">
+            <!-- Use below to render row for each object-->
+            <td data-test-id="date"></td>
+            <td>
+              <ul data-test-id="breakfast-list">
+                <li></li>
+              </ul>
+            </td>
+            <td>
+              <ul data-test-id="lunch-list">
+                <li></li>
+              </ul>
+            </td>
+            <td>
+              <ul data-test-id="dinner-list">
+                <li></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+</div>
